@@ -1,0 +1,82 @@
+<% layout('layout/boilerplate') -%>
+
+
+<div class="container">
+    <h1 class="text-success display-3">Edit a Plant</h1>
+</div>
+
+
+<div class="container bg-light justify-content-around  rounded py-5 px-5">
+    <form action="/plants/<%= plant._id%>?_method=PUT " novalidate class="validated-form" method="POST"
+        enctype="multipart/form-data">
+
+        <!-- NAME-->
+        <div class="form-group">
+            <label class="" for="name">Plant's name</label>
+            <input type="text" name="plant[name]" id="name" placeholder="Plant's name" class="form-control" required
+                value="<%=plant.name%>" autofocus>
+        </div>
+        <!-- DATE-->
+        <div class="form-group">
+            <label for="date">Date of Purchase</label>
+            <input type="date" name="plant[date]" id="date" class="form-control" value="<%=dateFormated%>" required>
+        </div>
+        <!-- FAMILY-->
+        <div class="form-group">
+            <label for="family">Plant's family</label>
+            <select name="plant[family]" id="family" class="form-control" required>
+                <% for(let family of families){ %>
+                <option value="<%=family%>" <%= plant.family === family ? 'selected' : ''%>><%=family%></option>
+                <% } %>
+            </select>
+        </div>
+
+
+        <!-- WATERING-->
+        <div class="form-group">
+            <label class="" for="water">Watering</label>
+            <input required type="text" name="plant[water]" id="water" placeholder="I should be watered every..."
+                class="form-control" value="<%=plant.water%>">
+        </div>
+
+
+        <!--NOTES-->
+        <label for="notes">Notes</label>
+        <textarea name="plant[notes]" class="form-control mb-3 " value="<%=plant.notes%>"><%=plant.notes%></textarea>
+
+        <!--UPLOAD IMAGE-->
+        <div class="mb-3">
+            <label for="">Upload Images</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="image" name="image" multiple>
+                <label class="custom-file-label" for="image">Choose image(s)...</label>
+            </div>
+        </div>
+
+        <!--IMAGES-->
+        <div class="mb-3 d-flex">
+            <% plant.images.forEach(function(img, i){ %>
+            <div>
+                <img src="<%=img.url%>" class="img-thumbnail">
+                <div class="custom-control custom-checkbox p-3">
+                    <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
+                    <label class="p-2 bg-light" for="image-<%=i%>">Delete ?</label>
+                </div>
+            </div>
+
+
+            <% })%>
+        </div>
+
+
+
+
+        <button type=" submit" class="btn btn-success">Submit</button>
+        <a href="/plants/<%=plant._id%>" class=" btn btn-outline-success">Cancel</a>
+    </form>
+</div>
+
+
+</div>
+<hr>
+</div>
