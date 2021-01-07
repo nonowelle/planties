@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin: 0;
     position: relative;
+    min-height: 100vh;
 }
 
 h1{
@@ -22,10 +23,6 @@ main {
     padding-bottom: 75px;
 }
 
-.page-container{
-    min-height: 100%;
-   
-}
 
 .foot{
     position: absolute;
