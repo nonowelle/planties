@@ -1,0 +1,15 @@
+<% layout('layout/boilerplate') -%>
+
+
+<div id="notfound">
+    <div class="container text-left p-5">
+        <div class="container p-5">
+            <h1 class="display-4 text-success"><%=err.message%></h1>
+            <h2 class="pt-5">Whoops. Looks like something went wrong.</h2>
+            <p><%=err.stack%></p>
+            <a class="btn btn-outline-success my-5" href="/">GO BACK TO THE HOME PAGE</a>
+        </div>
+
+    </div>
+
+</div>

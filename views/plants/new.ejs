@@ -1,0 +1,59 @@
+<% layout('layout/boilerplate') -%>
+
+
+<div class="container  d-flex justify-content-center">
+    <h1 class="text-success display-3">Add a Plant</h1>
+</div>
+
+
+
+
+<div class="container-fluid pb-5 d-flex justify-content-center">
+    <div class="row bg-light p-4 mx-1 justify-content-center ">
+        <form action="/plants" method="POST" enctype="multipart/form-data" class="validated-form" novalidate>
+
+            <div class="form-group">
+                <label class="" for="name">Plant's name</label>
+                <input type="text" name="plant[name]" id="name" placeholder="Plant's name" class="form-control"
+                    autofocus required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date of Purchase</label>
+                <input type="date" name="plant[date]" id="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="family">Plant's Family</label>
+                <select name="plant[family]" id="family" class="form-control" required>
+                    <% for(let family of families){ %>
+                    <option value="<%=family%>"><%=family%></option>
+                    <% } %>
+                </select>
+            </div>
+
+            <!-- WATERING-->
+            <div class="form-group">
+                <label class="" for="water">Watering</label>
+                <input type="text" name="plant[water]" id="water" required placeholder="I should be watered every..."
+                    class="form-control">
+            </div>
+
+
+
+            <!--NOTES-->
+            <label for="notes">Notes</label>
+            <textarea name="plant[notes]" class="form-control mb-3 " value=""></textarea>
+
+            <div class="mb-3">
+                <label for="">Upload Images</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="image" name="image" multiple>
+                    <label class="custom-file-label" for="images">Choose image(s)...</label>
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-success mt-3">Submit</button>
+        </form>
+    </div>
+
+</div>

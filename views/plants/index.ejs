@@ -1,0 +1,59 @@
+<% layout('layout/boilerplate') -%>
+
+
+<div class="container d-flex justify-content-center">
+    <h1 class="display-3 text-success">All Plants</h1>
+</div>
+
+<div class="container">
+    <%if(family !== 'My Collection') { %>
+    <a class="btn btn-outline-success" href="/plants"> View all plants</a>
+    <% } %>
+
+</div>
+<div class="container container-fluid pb-5 d-flex justify-content-center">
+    <div class="row bg-light p-2 mx-1 justify-content-center">
+        <div class="card p-4 m-3 " style="width: 20rem;">
+
+            <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
+                <p class="card-text">Add a New Plant</p>
+                <a href="/plants/new"><svg width="3em" height="3em" viewBox="0 0 16 16"
+                        class="plus bi bi-plus-circle text-success" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path fill-rule="evenodd"
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg></a>
+
+
+            </div>
+        </div>
+
+
+        <!--VRAI-->
+        <% for(let p of plants){ %>
+        <div class="card m-3 p-4" style="width: 20rem;">
+            <%if (p.images.length === 0 ){%>
+            <img class="card-img-top" src="/addImg.png">
+            <%} else { %>
+            <img class="card-img-top" src="<%=p.images[0].url%>">
+            <%}%>
+
+        
+            <div class="card-body">
+                <h5 class="card-title text-center"><a class="text-success"
+                        href='/plants/<%=p._id %>'><b><%=p.name%></b></a>
+            </h5>
+            <hr>
+            <p class="text-center"><%=p.family%></p>
+            <p class="text-center font-weight-lighter"><%=p.owner.username%>'s plant</p>
+
+
+        </div>
+        <!-- FIN-->
+    </div>
+    <%}%>
+    
+</div>
+</div>
