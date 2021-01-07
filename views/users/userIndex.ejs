@@ -1,20 +1,20 @@
 <% layout('layout/boilerplate') -%>
 
-<div class="container">
+<div class="container d-flex justify-content-center">
     <h1 class="display-3 text-success"><%= family %></h1>
 </div>
 
-<div class="container">
+<div class="container d-flex justify-content-center">
     <%if(family !== 'My Collection') { %>
     <a class="btn btn-outline-success" href="/plants"> View my whole collection</a>
     <% } %>
 </div>
 
 
-<div class="container container-fluid d-flex">
+<div class="container container-fluid pb-5 d-flex justify-content-center">
     <div class="row bg-light p-5 mb-5 justify-content-center">
 
-        <div class="card p-4 m-2" style="width: 20rem;">
+        <div class="card p-4 m-3" style="width: 20rem;">
 
             <div class="card-body text-center d-flex flex-column justify-content-center">
                 <p class="card-text">Add a New Plant</p>
