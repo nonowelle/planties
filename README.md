@@ -4,20 +4,17 @@ It is based on Colt Steele's Web Developer Bootcamp final project (Yelpcamp). Th
 
 ## Design
 
-### Home Page
+#### Home Page
 <img src="./public/home.png" width="400"/>
 
-### All plants
+#### All plants
 <img src="./public/all-plants.png" width="400"/>
 
-### Plant details
+#### Plant details
 <img src="./public/one-plant.png"  width="400"/>
 
-### Edit a Plant
+#### Edit a Plant
 <img src="./public/edit-plant.png" width="400"/>
-
-### Add a plant
-<img src="./public/add-a-plant.png" width="400"/>
 
 ## Technologies
 * HTML
