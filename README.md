@@ -5,7 +5,7 @@ It is based on Colt Steele's Web Developer Bootcamp final project (Yelpcamp). Th
 ## Design
 
 ### Home Page
-<img src="./public/home.png"width="400"/>
+<img src="./public/home.png" width="400"/>
 
 ### All plants
 <img src="./public/all-plants.png" width="400"/>
@@ -42,7 +42,20 @@ It is based on Colt Steele's Web Developer Bootcamp final project (Yelpcamp). Th
 * Creating and deleting care entries
 
 
+## Run it locally
+Install mongodb
+Create a cloudinary account to get an API key and secret code
+git clone https://github.com/nonowelle/planties
+cd planties
+npm install
+Create a .env file in the root of the project and add the following:
 
+DATABASEURL='<url>'
+API_KEY=''<key>
+API_SECRET='<secret>'
+Run mongod in another terminal and node app.js in the terminal with the project.
+
+Go to localhost:3000.
 
 
 
