@@ -5,7 +5,9 @@ It is based on Colt Steele's Web Developer Bootcamp final project (Yelpcamp). Th
 ## Design
 
 ### Home Page
-![Home Page](./public/home.png =500x)
+
+
+<img src="./public/home.png" alt="Home page" width="400"/>
 
 ### All plants
 ![All Plants](./public/all-plants.png)
