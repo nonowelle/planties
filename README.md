@@ -43,19 +43,19 @@ It is based on Colt Steele's Web Developer Bootcamp final project (Yelpcamp). Th
 
 
 ## Run it locally
-Install mongodb
-Create a cloudinary account to get an API key and secret code
-git clone https://github.com/nonowelle/planties
-cd planties
-npm install
-Create a .env file in the root of the project and add the following:
+1. Install mongodb
+2. Create a cloudinary account to get an API key and secret code
+3. git clone https://github.com/nonowelle/planties
+4. cd planties
+5. npm install
+6. Create a .env file in the root of the project and add the following:
 
-DATABASEURL='<url>'
-API_KEY=''<key>
-API_SECRET='<secret>'
-Run mongod in another terminal and node app.js in the terminal with the project.
+> DATABASEURL='<url>'
+> API_KEY=''<key>
+> API_SECRET='<secret>'
 
-Go to localhost:3000.
+7. Run mongod in another terminal and node app.js in the terminal with the project.
+8. Go to localhost:3000.
 
 
 
