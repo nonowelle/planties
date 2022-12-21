@@ -2,6 +2,8 @@
 Planties is a full-stack, RESTful Web app to collect and share your plants with other plant lovers!
 It is based on Colt Steele's Web Developer Bootcamp final project (Yelpcamp). Throught this project, I learned to make a full fledged application with CRUD functionalities using a database, REST APIS, Authentication & Authorization.
 
+https://serene-caverns-99636.herokuapp.com/
+
 ## Design
 
 #### Home Page
