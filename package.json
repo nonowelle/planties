@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22",
-    "postcss": "^8.4.31"
+    "postcss": "^8.4.31",
+    "word-wrap": "^1.2.4"
   }
 }
